@@ -1,46 +1,23 @@
-
 import React, {useState} from 'react';
 
-function TodoForm() {
-  const [item, setItem] = useState({
-    text: '',
-    difficulty: '',
-    assignee: ''
-  });
+function TodoForm (props) {
 
-  function handleInputChange (e){
-    const {name, value} = e.target;
-      setItem((prevValue)=>{
-        if(name === "text"){
-           setItem({
-             text: value,
-             difficulty: prevValue.difficulty,
-             assignee: prevValue.assignee
-            }) 
-        } if(name === "difficulty"){
-           setItem({
-             text: prevValue.text,
-             difficulty: value,
-             assignee: prevValue.assignee
-            }) 
-        } if(name === "assignee"){
-           setItem({
-             text: prevValue.text,
-             difficulty: prevValue.difficulty,
-             assignee: value
-            })     
-        }
-      })
+
+  const [state, setState] = useState({
+    item: {}
+  })
+  
+  function handleInputChange (e) {
+    setState({ item: {...state.item, [e.target.name]: e.target.value } });
   };
 
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
     e.target.reset();
-    setItem(() =>{
-      return [item]
-    })
+    props.handleSubmit(state.item);
+    const item = {};
+    setState({item});
   };
-
 
     return (
       <>
@@ -48,7 +25,11 @@ function TodoForm() {
         <form onSubmit={handleSubmit}>
           <label>
             <span>To Do Item</span>
-            <input name="text" placeholder="Add To Do List Item" onChange={handleInputChange} />
+            <input
+              name="text"
+              placeholder="Add To Do List Item"
+              onChange={handleInputChange}
+            />
           </label>
           <label>
             <span>Difficulty Rating</span>
