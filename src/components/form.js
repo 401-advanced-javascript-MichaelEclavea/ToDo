@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {Form} from 'react-bootstrap';
 function TodoForm (props) {
 
 
@@ -20,28 +20,32 @@ function TodoForm (props) {
   };
 
     return (
-      <>
-        <h3>Add Item</h3>
-        <form onSubmit={handleSubmit}>
-          <label>
-            <span>To Do Item</span>
-            <input
+      <div id="form">
+   
+        <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="formBasicEmail">
+        <h2 id="add">Add Item</h2>
+
+            <Form.Label>To Do Item</Form.Label>
+            <Form.Control className="text-muted"
               name="text"
               placeholder="Add To Do List Item"
               onChange={handleInputChange}
             />
-          </label>
-          <label>
-            <span>Difficulty Rating</span>
-            <input defaultValue="1" type="range" min="1" max="5" name="difficulty" onChange={handleInputChange} />
-          </label>
-          <label>
-            <span>Assigned To</span>
+
+
+
+          <Form.Group controlId="formBasicEmail"></Form.Group>
+            <Form.Label>Difficulty Rating</Form.Label>
+            <Form.Control defaultValue="1" type="range" min="1" max="5" name="difficulty" onChange={handleInputChange} />
+
+
+            <Form.Label>Assigned To</Form.Label>
             <input type="text" name="assignee" placeholder="Assigned To" onChange={handleInputChange} />
-          </label>
+          </Form.Group>
           <button>Add Item</button>
-        </form>
-      </>
+        </Form>
+      </div>
     );
 }
 

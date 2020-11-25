@@ -3,6 +3,65 @@ body, html {
     margin: 0;
     padding:0;
     width: 100%;
+    background-color: #212121;
+    color: #fbf6f0;
+
+}
+
+#add{
+    border-bottom: 1px solid #0d7377;
+    padding-bottom: 10px;
+}
+
+h2{
+    text-align: center;
+    margin: auto;
+}
+
+#todo-container{
+    margin-left: 50px;
+    display: grid;
+    grid-row: 1;
+    justify-content: center;
+    justify-items: center;
+   
+   
+}
+#form{
+    background-color: #323232;
+    padding: 35px 50px 55px 50px;
+    border: 1px solid #fbf6f0;
+    border-radius: 5px;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+div.form-group{
+    position: relative;
+    justify-content: center;
+}
+
+span{
+    text-align: center;
+    font-size: 1.4em;
+    border-radius: 10px;
+    
+}
+
+input{
+    text-align: center;
+}
+
+ul#todo-ul{
+    position: relative;
+    border: 1px solid black;
+    text-align: center;
+    justify-items: center;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    color: black;
+    background-color: #0d7477e5;
 }
 .todo-details {
     display:flex;
@@ -33,7 +92,7 @@ body, html {
 
         display:flex;
         flex-direction:column;
-        margin-right: 2em;
+        
 
         label {
             display: flex;
@@ -57,19 +116,19 @@ body, html {
 
             &.complete-true {
               span {
-                background: pink;
+                background: #f38181;
                 text-decoration:line-through;
                 &:hover {
-                   background: seagreen;
+                   background: #eaffd0;
                 }
               }
             }
 
             span {
-                background: #e0e0e0;
+                background: #ffffff;
                 cursor:pointer;
                 &:hover {
-                    background: pink;
+                    background: #14ffebba;
                 }
             }
              span, input {
@@ -82,7 +141,7 @@ body, html {
             button {
                 background: transparent;
                 border:none;
-                color:blue;
+                color:#14ffec;
                 cursor:pointer;
                 padding:0;
                 margin: 0 .75em;
