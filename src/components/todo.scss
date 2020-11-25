@@ -14,7 +14,7 @@ body, html {
 }
 
 h2{
-    text-align: center;
+    text-align: left;
     margin: auto;
 }
 
@@ -34,7 +34,7 @@ h2{
     border-radius: 5px;
     justify-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
 }
 
 div.form-group{
@@ -46,11 +46,11 @@ span{
     text-align: center;
     font-size: 1.4em;
     border-radius: 10px;
-    
+    color: black;
 }
 
 input{
-    text-align: center;
+    text-align: left;
 }
 
 ul#todo-ul{
@@ -61,7 +61,7 @@ ul#todo-ul{
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
     color: black;
-    background-color: #0d7477e5;
+    background-color: #12959ae5;
 }
 .todo-details {
     display:flex;
@@ -119,7 +119,7 @@ ul#todo-ul{
                 background: #f38181;
                 text-decoration:line-through;
                 &:hover {
-                   background: #eaffd0;
+                   background: #ffffff;
                 }
               }
             }

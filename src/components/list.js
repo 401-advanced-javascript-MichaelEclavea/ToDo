@@ -1,12 +1,11 @@
-import React from 'react';
-import './todo.scss';
 
+import React from 'react';
 
 function TodoList(props){
 
 
     return (
-      <ul id='todo-ul'>
+      <ul id="todo-ul">
         {props.list.map(item => (
           <li
             className={`complete-${item.complete.toString()}`}
