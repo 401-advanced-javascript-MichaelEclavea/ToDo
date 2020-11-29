@@ -53,16 +53,16 @@ input{
     text-align: left;
 }
 
-ul#todo-ul{
-    position: relative;
-    border: 1px solid black;
-    text-align: center;
-    justify-items: center;
-    border-radius: 10px;
-    padding: 10px 10px 10px 10px;
-    color: black;
-    background-color: #12959ae5;
-}
+// ul#todo-ul{
+//     position: relative;
+//     border: 1px solid black;
+//     text-align: center;
+//     justify-items: center;
+//     border-radius: 10px;
+//     padding: 10px 10px 10px 10px;
+//     color: black;
+//     // background-color: #12959ae5;
+// }
 .todo-details {
     display:flex;
     flex-direction:column;
